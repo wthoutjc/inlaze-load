@@ -9,7 +9,9 @@ class JobStatusEnum(str, Enum):
 
 class LoadingJobCreate(BaseModel):
     transform_job_id: str
+    data: str
 
 class LoadingJobStatus(BaseModel):
     id: str
     status: JobStatusEnum
+    data: str

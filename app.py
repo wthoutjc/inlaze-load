@@ -1,4 +1,4 @@
-# uvicorn app:app --host 0.0.0.0 --port 5000 --reload
+# uvicorn app:app --host 0.0.0.0 --port 5003 --reload
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.api.v1.endpoints.load import router
@@ -8,7 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="ETL Extraction Microservice")
+app = FastAPI(title="ETL Load Microservice")
 
 app.include_router(router, prefix=settings.API_V1_STR)
 
